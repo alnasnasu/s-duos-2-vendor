@@ -14,16 +14,6 @@
 
 LOCAL_PATH := vendor/samsung/kyleproxx
 
-ifeq ($(findstring kyleprods,$(TARGET_PRODUCT)),kyleprods)
-    PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/proprietary/lib/libbrcm_ril_KYLEPRODS.so:system/lib/libbrcm_ril.so \
-        $(LOCAL_PATH)/proprietary/lib/libril_KYLEPRODS.so:/system/lib/libril.so
-else
-    PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/proprietary/lib/libbrcm_ril_KYLEPRO.so:system/lib/libbrcm_ril.so \
-        $(LOCAL_PATH)/proprietary/lib/libril_KYLEPRO.so:/system/lib/libril.so
-endif
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/BCM4330B1_002.001.003.0967.1173.hcd:/system/bin/BCM4330B1_002.001.003.0967.1173.hcd \
     $(LOCAL_PATH)/proprietary/bin/bkmgrd:/system/bin/bkmgrd \
@@ -196,3 +186,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/lib/alsa-lib/libbcm_hp_filter.so:/system/usr/lib/alsa-lib/libbcm_hp_filter.so \
     $(LOCAL_PATH)/proprietary/usr/lib/alsa-lib/libbcm_test_filter.so:/system/usr/lib/alsa-lib/libbcm_test_filter.so \
     $(LOCAL_PATH)/proprietary/usr/share/alsa/alsa.conf:/system/usr/share/alsa/alsa.conf
+
+# RIL libs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/libbrcm_ril_KYLEPRODS.so:system/lib/libbrcm_ril_KYLEPRODS.so \
+    $(LOCAL_PATH)/proprietary/lib/libril_KYLEPRODS.so:/system/lib/libril_KYLEPRODS.so \
+    $(LOCAL_PATH)/proprietary/lib/libbrcm_ril_KYLEPRO.so:system/lib/libbrcm_ril_KYLEPRO.so \
+    $(LOCAL_PATH)/proprietary/lib/libril_KYLEPRO.so:/system/lib/libril_KYLEPRO.so
