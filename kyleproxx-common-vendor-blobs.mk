@@ -15,7 +15,7 @@
 LOCAL_PATH := vendor/samsung/kyleproxx
 
 #G-Apps
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/kyleproxx/gapps,system)
+BUILD_PREBUILT += $(call find-copy-subdir-files,*,vendor/samsung/kyleproxx/gapps,system)
 
 
 ifeq ($(findstring kyleprods,$(TARGET_PRODUCT)),kyleprods)
